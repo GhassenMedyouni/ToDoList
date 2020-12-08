@@ -59,6 +59,7 @@ export class ToDoPage implements OnInit {
                   key : element.key,
                   text : element.payload.exportVal().text,
                   checked : element.payload.exportVal().checked,
+                  userId: element.payload.exportVal().userId,
                   date : element.payload.exportVal().date.substring(11, 16)
                 });
               });
