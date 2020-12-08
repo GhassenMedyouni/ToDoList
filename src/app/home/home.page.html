@@ -1,20 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      ToDo app
     </ion-title>
+      <ion-icon slot="end" (click)="logOut()" name="log-out-outline"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
+  <div class="bg-img">
+    <ion-tabs slot="bottom">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <ion-tab-bar >
+        <ion-tab-button tab="toDo">
+          <ion-label>To Do </ion-label>
+          <ion-icon name="today-outline"><ion-badge color="danger">66</ion-badge>
+          </ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="done">
+          <ion-label> Done </ion-label>
+          <ion-icon name="checkmark-done-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
   </div>
+
+
 </ion-content>
+
+
+
+
+
+

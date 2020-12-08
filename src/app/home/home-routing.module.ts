@@ -6,6 +6,16 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
+    children: [
+      {
+        path: 'toDo',
+        loadChildren: () => import('../pages/to-do/to-do.module').then( m => m.ToDoPageModule)
+      },
+      {
+        path: 'done',
+        loadChildren: () => import('../pages/done/done.module').then( m => m.DonePageModule)
+      }
+    ]
   }
 ];
 
