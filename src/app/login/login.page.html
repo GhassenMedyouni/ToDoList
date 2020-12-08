@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <form class="bg-img" [formGroup]="loginForm">
+    <ion-img src="assets/auth.png"></ion-img>
+    <div>
+      <ion-item>
+        <ion-input name="email" formControlName="email" type="email" placeholder="your@email.com"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="password" formControlName="password" type="password" placeholder="password"></ion-input>
+      </ion-item>
+    </div>
+    <div>
+      <ion-button expand="full" color="danger" (click)="loginUser()">Login</ion-button>
+      <ion-button  color="success" (click)="goToSignUp()"> REGISTER </ion-button>
+      <ion-button slot="end" color="medium" (click)="goToReset()"> FORGET PASSWORD</ion-button>
+    </div>
+  </form>
+
+
+
+</ion-content>
